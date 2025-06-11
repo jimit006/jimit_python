@@ -26,3 +26,6 @@ print("addition : " , a + b )
 print("substrection : " , a - b )
 print("multiplication : " , a * b )
 print("division : " , a / b )
+
+# 6. rock , paper and scissors game
+

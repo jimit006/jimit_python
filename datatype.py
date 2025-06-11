@@ -89,14 +89,14 @@
 
 # logical operator
 
-x = True
-y = False
-z = False
+#x = True
+#y = False
+#z = False
 
-print(x or y or z)
+#print(x or y or z)
 
-print(x and y and z)
+#print(x and y and z)
 
-print(not x)
+#print(not x)
 
 
