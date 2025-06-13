@@ -1,18 +1,23 @@
-# print hello world program 
+#Program 1
+#print Hello World Program
 
-# print("hello world!")
+print("Hello World!")
 
-#print your name
 
-# name = input("enter your name :")
-# print('Hello' , name)
+#Program 2
+# print your name
 
-# Check positive ,nagative or zero
+name = input("Enter Your Name :")
+print('Hello' , name)
 
-# num = int(input("enter your number:"))
-# if num > 0:
-#     print("positive")
-# elif num < 0:
-#     print("nagative")
-# else:
-#     print("zero")
+#Program 3
+# check positive , nagative or zero
+
+num = int(input("Enter your number:"))
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Nagative")
+else:
+    print("Zero")
