@@ -1,80 +1,105 @@
-print("\nWelcome to the student data organizer!!")
+#1. Create a 1D Array (list) with five integer element display the array using a loop. 
 
-students = {}
+arr = [10 , 20 , 30 , 40 , 50 , 60 , [70]]
 
-def add_student():
-    sid = input("Enter Student ID: ")
-    name = input("Enter Name: ")
-    age = input("Enter Age: ")
-    grade = input("Enter Grade: ")
-    subjects = input("Enter Subjects (comma-separated): ").split(',')
-    students[sid] = {"Name": name, "Age": age, "Grade": grade, "Subjects": subjects}
-    print("Student added successfully!\n")
+print("Array Element: ")
 
-def display_all():
-    print("\n--- All Students ---")
-    if not students:
-        print("No student records found.\n")
-    else:
-        for sid, data in students.items():
-            print(f"ID: {sid} | Name: {data['Name']} | Age: {data['Age']} | Grade: {data['Grade']} | Subjects: {', '.join(data['Subjects'])}")
-    print()
+for num in arr:
+  print(num)
 
-def update_student():
-    sid = input("Enter Student ID to update: ")
-    if sid in students:
-        name = input("Enter new Name: ")
-        age = input("Enter new Age: ")
-        grade = input("Enter new Grade: ")
-        subjects = input("Enter new Subjects (comma-separated): ").split(',')
-        students[sid] = {"Name": name, "Age": age, "Grade": grade, "Subjects": subjects}
-        print("Student updated successfully!\n")
-    else:
-        print("Student ID not found!\n")
+print(len(arr))
 
-def delete_student():
-    sid = input("Enter Student ID to delete: ")
-    if sid in students:
-        del students[sid]
-        print("Student deleted successfully!\n")
-    else:
-        print("Student ID not found!\n")
+# 2. calculate the sum of all array elements in 1D array.abs
 
-def display_subjects():
-    all_subjects = set()
-    for data in students.values():
-        all_subjects.update(data["Subjects"])
-    print("\n--- Subjects Offered ---")
-    print(", ".join(all_subjects) if all_subjects else "No subjects available.")
-    print()
+list = [10 , 20 , 30 , 40 , 50]
 
-# Main menu
-while True:
-    print("\nSelect an option:")
-    print("1. Add Student")
-    print("2. Display All Students")
-    print("3. Update Student Information")
-    print("4. Delete Student")
-    print("5. Display Subjects Offered")
-    print("6. Exit")
+print(sum(list))
 
-    try:
-        choice = int(input("Enter your choice [1 - 6]: "))
+list_num = 0
 
-        if choice == 1:
-            add_student()
-        elif choice == 2:
-            display_all()
-        elif choice == 3:
-            update_student()
-        elif choice == 4:
-            delete_student()
-        elif choice == 5:
-            display_subjects()
-        elif choice == 6:
-            print("Exiting... Thank you!")
-            break
-        else:
-            print("Invalid choice! Please select between 1 to 6.")
-    except ValueError:
-        print("Please enter a valid number.")
+for num in list:
+  list_num+=num
+
+print(list_num)
+
+# 3. Find the maximun and minimun number of in 1D array,
+
+list = [10 , 20 , 30 , 40 , 50]
+
+print("Maximun Number" , max(list))
+print("Minimum Number" , min(list))
+
+# 4. Insert a new Element at a specific position in a 1D array. 
+
+list = [10 , 20 , 30 , 40 , 50]
+
+list[2] = 60
+
+print(list)
+
+# insert function
+
+position = 2
+
+new_element = 60
+
+list.insert(position , new_element)
+
+print(list)
+
+# 5. Delete an element by its value from a 1D array.
+
+list = [10 , 20 , 30 , 40 , 50]
+
+del list[4]
+
+print(list)
+
+# remove function()
+
+value_ref = 60
+
+list.remove(value_ref)
+
+print(list)
+
+# 6. Update an Element in a 1D array based on it's index.
+
+list = [10 , 20 , 30 , 40 , 50]
+
+list[2] = 60
+
+print(list)
+
+# 7. Search for an element in a 1D array and return it's index.
+
+list = [10 , 20 , 30 , 40 , 50]
+
+search_element = 50
+
+if search_element in list:
+  print("Element Found in index : " , list.index(search_element))
+else:
+  print("Element not Found....")
+
+# 8. concatenate two 1D array into a single array.
+ 
+list_1 = [10 , 20 , 30]
+
+list_2 = [40 , 50 , 60]
+
+combined = list_1 + list_2
+
+print("combined list: " , combined)
+
+#9. sort a list of integer in accending order using a sort() method.
+
+list = [10 , 45 , 23 , 89 , 35 , 101]
+
+list.sort()
+
+print(list)
+
+list.reverse()
+
+print(list)
